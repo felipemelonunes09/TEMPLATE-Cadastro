@@ -1,0 +1,33 @@
+<div class="row justify-content-center mt-5">
+	<div class="col-lg-5 col-sm-10">
+		<div class="card shadow-lg">
+			<div class="card-body">
+
+				<h1 class="display-5 text-center"> Cadastre-se </h1>
+
+				<form method="POST" action="/val">
+					<label class="mt-2"> E-mail </label>
+					<input type="email" name="email" class="form-control" placeholder="Digite seu email" value="{{ validateEmail.value }}">
+					<div id="passwordHelpBlock" class="form-text">
+						<ul>
+							<li class="{{validateEmail.class}}"> <strong> E-mail válido  </strong> </li>
+						</ul>
+					 </div>
+
+					<label class="mt-4"> Password </label>
+					<input type="password" name="password" class="form-control" placeholder="Digite sua senha" value="{{ validatePassword.value }}">
+					<div id="passwordHelpBlock" class="form-text">
+						<ul>
+							<li class="{{ validatePassword.class.[0] }}"> <strong> Senha válida válida  </strong> </li>
+							<li class="{{ validatePassword.class.[1] }}"> <strong> Senha maior que 8 caracteres  </strong> </li>
+						</ul>
+					 </div>
+
+					<div class="text-end mt-4">
+						<button class="btn btn-sm btn-success" type="submit"> Enviar </button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
